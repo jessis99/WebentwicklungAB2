@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgaben</title>
+    <link href="https://unpkg.com/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/bootstrap-table@1.20.1/dist/bootstrap-table.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/bootstrap-table@1.20.1/dist/bootstrap-table.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <header class="bg-light mt-3 mb-3 p-5">
+        <h1 style="text-align: center">
+            Aufgabenplaner: Aufgaben
+        </h1>
+    </header>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-2">
+            <ul class="list-group">
+                <li class="list-group-item" style="color: cornflowerblue">
+                    <a href="Login.html"> Login </a>
+                </li>
+                <li class="list-group-item" style="color: cornflowerblue">
+                    <a href="Projekte.html"> Projekte </a>
+                </li>
+                <li class="list-group-item" style="color: cornflowerblue">
+                    <a href="index.html"> Aktuelles Projekt </a>
+                <li class="list-group-item" style="color: cornflowerblue; margin-left: 40px">
+                    <a href="Reiter.html"> Reiter </a>
+                </li>
+                <li class="list-group-item" style="color: cornflowerblue; margin-left: 40px">
+                    <a href="Aufgaben.html"> Aufgaben </a>
+                </li>
+                <li class="list-group-item" style="color: cornflowerblue; margin-left: 40px">
+                    <a href="Personen.html"> Mitglieder </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-8">
+
+            <div class="row">
+                <table class="table table-responsive">
+                    <thead class="table-light">
+                    <tr>
+                        <th>Aufgabenbezeichnung:</th>
+                        <th>Beschreibung der Aufgabe:</th>
+                        <th>Reiter:</th>
+                        <th>Zuständig:</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>HTML Datei erstellen</td>
+                        <td>HTML Datei erstellen</td>
+                        <td>ToDo</td>
+                        <td>Max Mustermann</td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can ms-3"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CSS Datei erstellen</td>
+                        <td>CSS Datei erstellen</td>
+                        <td>ToDo</td>
+                        <td>Max Mustermann</td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can ms-3"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PC eingeschaltet</td>
+                        <td>PC einschalten</td>
+                        <td>Erledigt</td>
+                        <td>Max Mustermann</td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can ms-3"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kaffee trinken</td>
+                        <td>Kaffee trinken</td>
+                        <td>Erledigt</td>
+                        <td>Petra Müller</td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can ms-3"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Für die Uni lernen</td>
+                        <td>Für die Uni lernen</td>
+                        <td>Verschoben</td>
+                        <td>Max Mustermann</td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can ms-3"></i>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row">
+                <form>
+                    <div class="form-group">
+                        <label><h4>Bearbeiten/Erstellen</h4></label>
+                        <form>
+                            <div class="form-group">
+                                <label for="aufgabenbezeichnung">Aufgabenbezeichnung:</label>
+                                <input type="text" placeholder="Aufgabe" class="form-control" id="aufgabenbezeichnung">
+                            </div>
+                        </form>
+                        </br>
+                        <form>
+                            <div class="form-group">
+                                <label for="beschreibung">Beschreibung der Aufgabe:</label>
+                                <textarea name="beschreibung" placeholder="Beschreibung" class="form-control"
+                                          id="beschreibung"></textarea>
+                            </div>
+                        </form>
+                        </br>
+                        <form>
+                            <div class="form-group">
+                                <label for="erstellungsdatum">Erstellungsdatum:</label>
+                                <input type="text" placeholder="01.01.19" class="form-control" id="erstellungsdatum">
+                            </div>
+                        </form>
+                        </br><form>
+                            <div class="form-group">
+                                <label for="faelligbis">fällig bis:</label>
+                                <input type="text" placeholder="01.01.19" class="form-control" id="faelligbis">
+                            </div>
+                        </form>
+                        </br>
+                        <form>
+                            <div class="form-group">
+                                <label for="zugehoerigerreiter">Zugehöriger Reiter:</label>
+                                <select class="form-control" id="zugehoerigerreiter">
+                                    <option value="String">ToDo</option>
+                                    <option value="String">Erledigt</option>
+                                    <option value="String">Verschoben</option>
+                                </select>
+                            </div>
+                        </form>
+                        </br>
+                        <form>
+                            <div class="form-group">
+                                <label for="zustaendig">Zuständig:</label>
+                                <select class="form-control" id="zustaendig">
+                                    <option value="String">Max Mustermann</option>
+                                    <option value="String">Petra Müller</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    </br>
+                    <fieldset>
+                        <button type="submit" class="btn btn-primary">
+                            Speichern
+                        </button>
+                        <button type="reset" class="btn btn-info">
+                            Reset
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            </br>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
