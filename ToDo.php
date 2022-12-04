@@ -15,23 +15,13 @@
 
 <?php
     $todos=array(
-            array(
-                'header' => 'ToDo:',
-                'item1' => 'HTML Datei erstellen (Max Mustermann)',
-                'item2' => 'CSS Datei erstellen (Max Mustermann)'
-            ),
-            array(
-                'header' => 'Erledigt:',
-                'item1' => 'PC eingeschaltet (Petra Müller)',
-                'item2' => 'Kaffee trinken (Petra Müller)'
-            ),
-            array(
-                'header' => 'Verschoben:',
-                'item1' => 'Für die Uni lernen (Max Mustermann)'
+            array('ToDo:', 'HTML Datei erstellen (Max Mustermann)','CSS Datei erstellen (Max Mustermann)'),
+            array('Erledigt:', 'PC eingeschaltet (Petra Müller)', 'Kaffee trinken (Petra Müller)'),
+            array('Verschoben:', 'Für die Uni lernen (Max Mustermann)'
             )
     );
 
-    var_dump($todos);
+    //var_dump($todos);
 ?>
 
     <div class="container-fluid">
@@ -47,10 +37,12 @@
                         foreach ($todos as $todo): ?>
                             <div class="col">
                                 <div class="card">
-                                    <div class="card-header"><?php echo $todo['header'] ?></div>
+                                    <div class="card-header"><?php echo $todo[0] ?></div>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"><?php echo $todo['item1'] ?></li>
-                                        <li class="list-group-item"><?php echo $todo['item2'] ?></li>
+                                        <?php
+                                        for ($i=1; $i < count($todo); $i++): ?>
+                                        <li class="list-group-item"><?php echo $todo[$i] ?></li>
+                                        <?php endfor; ?>
                                     </ul>
                                 </div>
                             </div>

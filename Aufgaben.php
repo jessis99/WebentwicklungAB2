@@ -48,7 +48,7 @@ $aufgaben=array(
     ),
 );
 
-var_dump($aufgaben);
+//var_dump($aufgaben);
 ?>
 
 <div class="container-fluid">

@@ -26,7 +26,7 @@
             )
     );
 
-    var_dump($personen);
+    //var_dump($personen);
 ?>
 
 <div class="container-fluid">
